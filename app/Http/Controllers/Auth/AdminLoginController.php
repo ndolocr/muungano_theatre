@@ -7,5 +7,7 @@ use Illuminate\Http\Request;
 
 class AdminLoginController extends Controller
 {
-    //
+    public function showLoginForm(){
+    	return view('auth.admin-login');
+    }
 }
