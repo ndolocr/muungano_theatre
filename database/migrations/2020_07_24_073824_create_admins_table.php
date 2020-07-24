@@ -24,6 +24,7 @@ class CreateAdminsTable extends Migration
             $table->string('email')->unique();
             $table->string('profile_picture');
             $table->integer('telephone')->unique();
+            $table->timestamp('email_verified_at')->nullable();
             $table->timestamps();
         });
     }
