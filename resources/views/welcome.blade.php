@@ -46,6 +46,7 @@
 
             .title {
                 font-size: 84px;
+                letter-spacing: 25px;
             }
 
             .links > a {
