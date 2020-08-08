@@ -26,8 +26,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 |--------------------------------------------------------------------------|
 */
 Route::prefix('admin')->group(function(){
-	Route::get('/login-admin', 'Auth\AdminLoginController@showLoginForm')->name('admin-login');
+	//Login Routes
 	Route::post('/login', 'Auth\AdminLoginController@login')->name('admin-login-submit');
+	Route::get('/login-admin', 'Auth\AdminLoginController@showLoginForm')->name('admin-login');
+	
+	//Movie Routes
+	Route::get('/movie/create', 'AdminController@createMovie')->name('create-movie');
+
 	Route::get('/', 'AdminController@index')->name('admin-dashboard');	
 });
 

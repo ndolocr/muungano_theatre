@@ -21,8 +21,11 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
-    {
+    public function index(){
         return view('dashboard');
+    }
+
+    public function createMovie(){
+        return view('backend.createMovie');
     }
 }
