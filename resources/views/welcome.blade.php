@@ -46,6 +46,7 @@
 
             .title {
                 font-size: 84px;
+                letter-spacing: 25px;
             }
 
             .links > a {
@@ -85,7 +86,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="">Movies</a>
+                    <a href="#">Movies</a>
                     <a href="">Series</a>
                     <a href="">Animation</a>
                     <a href="">Music Videos</a>
