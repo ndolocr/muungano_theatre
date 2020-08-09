@@ -102,7 +102,9 @@ class AdminMovieController extends Controller
      */
     public function show($id)
     {
-        //
+        //Load Movie
+        $data = Movie::find($id);
+        return view('backend.movies.movies-show', compact('data'));
     }
 
     /**

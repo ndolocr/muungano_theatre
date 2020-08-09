@@ -1,4 +1,3 @@
-
 @extends('layouts.app')
 
 @section('title') Movies @endsection
@@ -28,7 +27,7 @@
                 <thead>
                     <tr>
                         <th></th>
-                        <th> </th>           
+                        <!-- <th> </th> -->          
                         <th> Movie Title </th>
                         <th> Year Released </th>
                         <th> Movie Duration </th>
@@ -44,12 +43,12 @@
                         @foreach($datas as $data)
                             <tr>
                                 <td> {{ $loop->iteration }} </td>
-                                <td> <img src="{{ asset('storage/assets/img/movies/'. $data->feature_image) }}" alt="Feature Image" style="width: 45px;"> </td>
+                                <!--<td> <img src="{{ asset('storage/img/movies/'. $data->feature_image) }}" alt="Feature Image" style="width: 45px;"> </td> -->
                                 <td> {{ $data->title }} </td>
                                 <td> {{ $data->year_released }} </td>
                                 <td> {{ $data->duration}} minutes </td>
                                 <td>
-                                    <a href="" class='btn green btn-outline sbold uppercase'> <i class='fa fa-eye'></i> </a>
+                                    <a href="{{ route('movies-show', $data->id) }}" class='btn green btn-outline sbold uppercase'> <i class='fa fa-eye'></i> </a>
                                 </td>
                                 <td> 
                                     <a href="{{ route('movies-edit', $data->id) }}" class='btn yellow btn-outline sbold uppercase'> <i class='fa fa-edit'></i> </a>

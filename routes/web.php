@@ -33,6 +33,7 @@ Route::prefix('admin')->group(function(){
 	//Movie Routes
 	Route::get('/movies', 'AdminMovieController@index')->name('movies-all');
 	Route::post('/movie/store', 'AdminMovieController@store')->name('movies-store');
+	Route::get('/movies/show/{id}', 'AdminMovieController@show')->name('movies-show');
 	Route::get('/movie/create', 'AdminMovieController@create')->name('movies-create');
 	Route::get('/movies/edit/{id}', 'AdminMovieController@edit')->name('movies-edit');
 	Route::get('/movies/delete/{id}', 'AdminMovieController@delete')->name('movies-delete');

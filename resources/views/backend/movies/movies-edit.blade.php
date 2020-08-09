@@ -141,7 +141,7 @@
                                     <div class="row">
                                         <div class="col-md-4">
                                             <div class="input-group">
-                                                <img src=" {{ asset('storage/assets/img/movies/'. $movie->feature_image) }} " alt="Feature Image" style="width: 100px;">
+                                                <img src=" {{ asset('storage/img/movies/'. $movie->feature_image) }} " alt="Feature Image" style="width: 100px;">
                                             </div> 
                                         </div>
 
