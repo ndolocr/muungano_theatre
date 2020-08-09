@@ -154,12 +154,14 @@
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item  ">
-                                    <a href="{{ route('create-movie') }}" class="nav-link ">
+                                    <a href="{{ route('movies-create') }}" class="nav-link ">
+                                        <i class="fa fa-plus"></i>
                                         <span class="title">Add New</span>
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="" class="nav-link ">
+                                    <a href="{{ route('movies-all') }}" class="nav-link ">
+                                        <i class="fa fa-eye"></i>
                                         <span class="title">View All</span>
                                     </a>
                                 </li>                                
@@ -328,7 +330,7 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     <!-- BEGIN CORE PLUGINS -->
-        <script src="{{ URL::asset('ckeditor/ckeditor.js') }}"></script>
+        <script src="{{ URL::asset('js/ckeditor/ckeditor.js') }}"></script>
         <script src="{{ URL::asset('js/jquery.min.js') }}" type="text/javascript"></script>
         <script src="{{ URL::asset('js/js.cookie.min.js') }}" type="text/javascript"></script>
         <script src="{{ URL::asset('js/jquery.blockui.min.js') }}" type="text/javascript"></script>

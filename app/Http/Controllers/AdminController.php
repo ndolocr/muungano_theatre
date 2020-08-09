@@ -26,6 +26,10 @@ class AdminController extends Controller
     }
 
     public function createMovie(){
-        return view('backend.createMovie');
+        return view('backend.movie-create');
+    }
+
+    public function storeMovie(){
+        return "Saving Movie Data";
     }
 }

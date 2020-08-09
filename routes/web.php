@@ -31,7 +31,13 @@ Route::prefix('admin')->group(function(){
 	Route::get('/login-admin', 'Auth\AdminLoginController@showLoginForm')->name('admin-login');
 	
 	//Movie Routes
-	Route::get('/movie/create', 'AdminController@createMovie')->name('create-movie');
+	Route::get('/movies', 'AdminMovieController@index')->name('movies-all');
+	Route::post('/movie/store', 'AdminMovieController@store')->name('movies-store');
+	Route::get('/movie/create', 'AdminMovieController@create')->name('movies-create');
+	Route::get('/movies/edit/{id}', 'AdminMovieController@edit')->name('movies-edit');
+	Route::get('/movies/delete/{id}', 'AdminMovieController@delete')->name('movies-delete');
+	Route::put('/movies/update/{id}', 'AdminMovieController@update')->name('movies-update');
+	Route::delete('/movies/destroy/{id}', 'AdminMovieController@destroy')->name('moviess-destroy');
 
 	Route::get('/', 'AdminController@index')->name('admin-dashboard');	
 });
