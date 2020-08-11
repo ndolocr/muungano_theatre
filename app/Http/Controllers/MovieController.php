@@ -48,7 +48,8 @@ class MovieController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = Movie::find($id);
+        return view('frontend.movie-details', compact('data'));
     }
 
     /**
